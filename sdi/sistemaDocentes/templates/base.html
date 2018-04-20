@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+     {% block styles %}
+
+        < <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+        <!-- Bootstrap Core Css -->
+        <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.css' %}" />
+
+        <!-- Waves Effect Css -->
+        <link rel="stylesheet" href="{% static 'plugins/node-waves/waves.css' %}" />
+
+        <!-- Animation Css -->
+        <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}" />
+
+        <!-- Custom Css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+        <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+        <link rel="stylesheet" href="{% static 'css/themes/all-themes.css' %}" />
+
+    {% endblock %}
+</head>
+<body>
+
+</body>
+</html>
