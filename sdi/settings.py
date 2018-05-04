@@ -117,9 +117,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..')
+SITE_ROOT = PROJECT_ROOT
+
+STATIC_ROOT = os.path.join(os.path.dirname(SITE_ROOT), 'static')
+STATIC_PATH = STATIC_ROOT
+STATIC_URL = '/static/'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = "staticfiles"

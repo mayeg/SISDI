@@ -13,4 +13,14 @@ class LoginForm(forms.Form):
     )
 
 
-
+class DepartamentoForm(forms.Form):
+    nombre = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control', 'placeholder': 'Nombre'})
+    )
+    codigo = forms.IntegerField(widget=forms.TextInput(attrs={
+        'class': 'form-control', 'placeholder': 'codigo'})
+    )
+    director = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control', 'placeholder': 'Director'})
+    )
+    falcultad = forms.Select()

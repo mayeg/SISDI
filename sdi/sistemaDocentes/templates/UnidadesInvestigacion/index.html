@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %} Docentes Investigadores {% endblock %}
+
+{% block content %}
+<h1 class="text-center">Unidades de investigacion</h1>
+<div class="card row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-4">
+             <a href="{% url 'facultad'%}">
+            <h5>Facultades</h5>
+        </a>
+        </div>
+        <div class="col-md-4">
+             <a href="{% url 'departamento'%}">
+            <h5>Departamentos</h5>
+        </a>
+        </div>
+        <div class="col-md-4">
+             <a href="{% url 'facultad'%}">
+            <h5>Institutos</h5>
+        </a>
+        </div>
+        <div class="col-md-4">
+             <a href="{% url 'facultad'%}">
+            <h5>Centros</h5>
+        </a>
+        </div>
+        <div class="col-md-4">
+             <a href="{% url 'facultad'%}">
+            <h5>Semilleros</h5>
+        </a>
+        </div>
+        <div class="col-md-4">
+             <a href="{% url 'facultad'%}">
+            <h5>Grupos</h5>
+        </a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+<!-- Jquery DataTable Plugin Js -->
+
+{% endblock %}
