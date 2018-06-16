@@ -4,9 +4,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from sdi.sistemaDocentes.models import Departamento, Facultad, Docente, GrupoInvestigacion, SemilleroInvestigacion, \
-    ProyectoInvestigacion, Beneficios, Compromiso_Docente, TipologiaProductos, ClasificacionProductos, \
-    Lineas_investigacion, Titulo_Docente
+from sdi.sistemaDocentes.models import *
 
 admin.site.register(Docente)
 admin.site.register(Facultad)

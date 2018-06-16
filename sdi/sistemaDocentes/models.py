@@ -10,13 +10,17 @@ class Facultad(models.Model):
     nombre = models.CharField(max_length=250)
     decano = models.CharField(max_length=50, unique=True)
 
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
+
 
 class Departamento(models.Model):
     nombre = models.CharField(max_length=250)
-    codigo = models.CharField(max_length=50, unique=True)
     director = models.CharField(max_length=50, unique=True)
     falcultad = models.ForeignKey(Facultad, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
 
 class Beneficios(models.Model):
     TIPO_BENEFICIO_CHOICES = (
@@ -36,39 +40,55 @@ class Beneficios(models.Model):
     tiempo = models.CharField(max_length=50, choices=TIEMPO_CHOICES,
                             default='No seleccion')
 
+    def __str__(self):
+        return u'{0}'.format(self.tipo)
+
 
 class ClasificacionProductos(models.Model):
     nombre = models.CharField(max_length=250)
     descripcion = models.CharField(max_length=350)
+
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
 
 
 class TipologiaProductos(models.Model):
     nombre = models.CharField(max_length=350)
     clasificacion = models.ForeignKey(ClasificacionProductos, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
+
 
 class Titulo_Docente(models.Model):
     NIVEL_FORMACION_CHOICES = (
+        ('tecnologia','Tecnologia'),
         (' pregrado ', ' Pregrado '),
         (' especializacion ', ' Especializacion '),
         (' maestria ', ' Maestria '),
         (' doctorado ', ' Doctorado '),
         ('phd', 'PhD'),
     )
-    nombre = models.CharField(max_length=350)
+    nombre = models.CharField(max_length=255, unique=True)
     nivel_formacion = models.CharField(max_length=50, choices=NIVEL_FORMACION_CHOICES,
                                         default='No seleccion')
+
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
 
 
 class Lineas_investigacion(models.Model):
     nombre = models.CharField(max_length=350)
 
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
+
 
 class Docente(models.Model):
     TIPO_VINCULACION_CHOICES = (
-        (' catedra', 'Catedra'),
-        (' planta', 'Planta'),
-        (' ocacional', ' Ocacional'),
+        (' Catedra', 'Catedra'),
+        (' Planta', 'Planta'),
+        (' Ocacional', ' Ocacional'),
     )
     REPRESENTANTE_FACULTAD_INVESTIGACION_CHOICES = (
         ('si', 'Si'),
@@ -78,7 +98,7 @@ class Docente(models.Model):
     apellidos = models.CharField(max_length=250)
     cedula = models.CharField(max_length=50, unique=True)
     codigo = models.CharField(max_length=50, unique=True)
-    email = models.CharField(max_length=250)
+    email = models.EmailField()
     titulo = models.ManyToManyField(Titulo_Docente)
     tipo_vinculacion = models.CharField(max_length=50, choices=TIPO_VINCULACION_CHOICES,
                                         default='No seleccion')
@@ -86,6 +106,9 @@ class Docente(models.Model):
                                  on_delete=models.CASCADE)
     representante_facultad_investigacion = models.CharField(max_length=2, choices=REPRESENTANTE_FACULTAD_INVESTIGACION_CHOICES,
                                                             default='No seleccion')
+
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
 
 
 class Compromiso_Docente(models.Model):
@@ -97,6 +120,9 @@ class Compromiso_Docente(models.Model):
     fecha_fin = models.DateField()
     descripcion = models.CharField(max_length=250)
 
+    def __str__(self):
+        return u'{0}'.format(self.docente_id.attname)
+
 
 class GrupoInvestigacion(models.Model):
     nombre = models.CharField(max_length=250, unique=True)
@@ -107,6 +133,9 @@ class GrupoInvestigacion(models.Model):
                                  on_delete=models.CASCADE)
     lineas_investigacion = models.ManyToManyField(Lineas_investigacion)
 
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
+
 
 class SemilleroInvestigacion(models.Model):
     nombre = models.CharField(max_length=250, unique=True)
@@ -115,6 +144,9 @@ class SemilleroInvestigacion(models.Model):
     facultad = models.ForeignKey(Facultad, null=True, blank=True,
                                  on_delete=models.CASCADE)
     lineas_investigacion = models.ManyToManyField(Lineas_investigacion)
+
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
 
 
 class ProyectoInvestigacion(models.Model):
@@ -133,5 +165,8 @@ class ProyectoInvestigacion(models.Model):
     coinvestigador = models.ManyToManyField(Docente, related_name='+')
     tutor = models.OneToOneField(Docente, null=True, blank=True, related_name='+', on_delete=models.CASCADE)
     joven_investigador = models.CharField(max_length=150, null=True)
+
+    def __str__(self):
+        return u'{0}'.format(self.nombre)
 
 #----- Beneficios y compromisos, tipologia de productos

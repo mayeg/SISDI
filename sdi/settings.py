@@ -124,6 +124,8 @@ STATIC_ROOT = os.path.join(os.path.dirname(SITE_ROOT), 'static')
 STATIC_PATH = STATIC_ROOT
 STATIC_URL = '/static/'
 
+LOGIN_REDIRECT_URL = ""
+LOGIN_URL = "/login"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/

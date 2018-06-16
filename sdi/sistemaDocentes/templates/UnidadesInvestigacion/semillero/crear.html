@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %} Semilleros de investigacion {% endblock %}
+{% block content %}
+<div class="signup-box">
+    <div class="card">
+        <div class="body">
+            <form id="sign_up"  method="POST" novalidate>
+                 {% csrf_token %}
+                <div class="msg">Registro de Semillero de Investigacion</div>
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                             {{ form.nombre }}
+                        </div>
+                    </div>
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                    <div class="form-line">
+                        {{form.horas_recomendadas}}
+                    </div>
+                </div>
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                    <div class="form-line">
+                        {{form.director}}
+                    </div>
+                </div>
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                    <div class="form-line">
+                        {{form.facultad}}
+                    </div>
+                </div>
+
+                <input class="btn btn-block btn-lg bg-pink waves-effect" type="submit" value="Crear Semilleros de Investigacion"> </input>
+
+            </form>
+            <a href="{% url 'semilleros' %}" class="btn btn-default btn-sm">
+        <i class="fa fa-reply"></i> Volver
+    </a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

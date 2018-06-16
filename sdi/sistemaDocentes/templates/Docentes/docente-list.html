@@ -1,11 +1,6 @@
 {% extends "base.html" %}
 {% block title %} Docentes Investigadores {% endblock %}
-{% block style %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css' %}"/>
-{% endblock %}
 {% block content %}
-<h1 class="text-center"><b>Docentes</b></h1>
 {% if object_list %}
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -39,7 +34,7 @@
                             <th class="text-center">Cedula</th>
                             <th class="text-center">Codigo</th>
                             <th class="text-center">email</th>
-                            <th class="text-center">Tipo vinculacion</th>
+                            <th class="text-center">Vinculacion</th>
                             <th class="text-center">Opciones</th>
                         </tr>
                         </thead>
@@ -51,7 +46,7 @@
                             <th class="text-center">Cedula</th>
                             <th class="text-center">Codigo</th>
                             <th class="text-center">email</th>
-                            <th class="text-center">Tipo vinculacion</th>
+                            <th class="text-center">Vinculacion</th>
                             <th class="text-center">Opciones</th>
                         </tr>
                         </tfoot>
@@ -82,11 +77,6 @@
         </div>
     </div>
 </div>
-
-{% block javascript %}
-<!-- Jquery DataTable Plugin Js -->
-
-{% endblock %}
 {% include 'plantilla/pagination.html' %}
 
 {% else %}

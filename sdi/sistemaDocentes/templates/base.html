@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>{%block title%}{% endblock %}</title>
-    {% block styles %}
     {% load static %}
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
-          type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
@@ -18,7 +17,10 @@
 
     <!-- Animation Css -->
     <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}"/>
+    <link rel="stylesheet" href="{% static 'plugins/animate-css/animate1.css' %}"/>
 
+    <link rel="stylesheet" href="{% static 'plugins/morrisjs/morris.css' %}"/>
+    <link rel="stylesheet" href="{% static 'plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css' %}"/>
     <!-- Custom Css -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 
@@ -26,7 +28,6 @@
     <link rel="stylesheet" href="{% static 'css/themes/all-themes.css' %}"/>
 
     <!--<meta  name = " viewport "  content = " width = device-width, initial-scale = 1.0 " />-->
-    {% endblock %}
 </head>
 <body class="theme-red">
 <!-- Page Loader -->
@@ -147,7 +148,7 @@
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">widgets</i>
-                        <span>Widgets</span>
+                        <span>Clasificacion de Productos</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
@@ -190,18 +191,16 @@
                         </li>
                     </ul>
                 </li>
-
             </ul>
         </div>
         {% endblock %}
-
         <!-- #Menu -->
         <!-- Footer -->
         <div class="legal">
             {% block footer %}
             <div class="copyright">
-                &copy; 2018 - 2019 <a href="">UFPS - Coordinacion de
-                <p>Investigacion</p></a>.
+                &copy; 2018 - 2019 <a href="">Vicerectoria Asistente
+                <p>de Investigación y Extensión </p> </a>.
             </div>
             <div class="version">
                 <b>Version: </b> 1.0
@@ -216,18 +215,16 @@
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            <h2> {% block content %}{% endblock %}</h2>
+             {% block content %}
+                {% endblock %}
         </div>
     </div>
 </section>
 
-<!-- Jquery Core Js -->
-{% block javascript %}
-   {% load static %}
 <script type="text/javascript" src="https://www.google-analytics.com/analytics.js"></script>
 
 <script type="text/javascript" src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
-
+<script type="text/javascript" src="{% static 'js/admin.js' %}"></script>
 <!-- Bootstrap Core Js -->
 <script type="text/javascript" src="{% static 'plugins/bootstrap/js/bootstrap.js' %}"></script>
 
@@ -269,15 +266,21 @@
         src="{% static 'plugins/jquery-datatable/extensions/export/buttons.html5.min.js' %}"></script>
 <script type="text/javascript"
         src="{% static 'plugins/jquery-datatable/extensions/export/buttons.print.min.js' %}"></script>
-
+<script type="text/javascript" src="{% static 'plugins/jquery-validation/jquery.validate.js' %}"></script>
 <!-- Custom Js -->
-<script type="text/javascript" src="{% static 'js/admin.js' %}"></script>
+
 <script type="text/javascript" src="{% static 'js/pages/index.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/pages/examples/sign-up.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/pages/tables/jquery-datatable.js' %}"></script>
 
 <!-- Demo Js -->
 <script type="text/javascript" src="{% static 'js/demo.js' %}"></script>
-{% endblock %}
+
+<script>
+      $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
 </body>
 
 </html>

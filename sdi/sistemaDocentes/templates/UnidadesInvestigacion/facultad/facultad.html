@@ -1,34 +1,15 @@
 {% extends "base.html" %}
-{% block title %} Docentes Investigadores {% endblock %}
-{% block style %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css' %}"/>
-{% endblock %}
-
+{% block title %} Facultades {% endblock %}
 {% block content %}
 <h1 class="text-center"><b>Facultades</b></h1>
 {% if object_list %}
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
-            <div class="header">
-                <h2>
-                    Facultades
-                </h2>
-                <ul class="header-dropdown m-r--5">
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true" aria-expanded="false">
-                            <i class="material-icons">more_vert</i>
-                        </a>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);">Action</a></li>
-                            <li><a href="javascript:void(0);">Another action</a></li>
-                            <li><a href="javascript:void(0);">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            <div class="header text-right">
+                 <a href="{% url 'facultad-crear' %}"  class="waves-effect waves-light btn gradient-45deg-purple-deep-orange gradient-shadow"
+                 title="Crear">
+                     <i class="material-icons">add</i></a>
             <div class="body">
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
@@ -56,11 +37,13 @@
                             <td>{{ fac.decano }}</td>
 
                             <td>
-                                <a class="waves-effect waves-light btn" title="Informacion"
-                                   data-toggle="tooltip" data-placement="top"
+                                <a class="waves-effect waves-light btn" title="Editar"
                                    href="">
                                     <i class="material-icons">edit</i>
-                                    <span>Editar</span>
+                                </a>
+                                <a class="waves-effect waves-light btn" title="Mas"
+                                   href="">
+                                    <i class="material-icons">add</i>
                                 </a>
                             </td>
                         </tr>
@@ -72,15 +55,8 @@
         </div>
     </div>
 </div>
-{% block javascript %}
-<!-- Jquery DataTable Plugin Js -->
-
-{% endblock %}
-
-
 {% else %}
 <h3 class="text-info">No se han registrado.</h3>
 {% endif %}
-
 {% endblock %}
 

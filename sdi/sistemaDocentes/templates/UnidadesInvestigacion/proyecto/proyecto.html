@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %} Proyecto de investigacion {% endblock %}
+{% block content %}
+<h1 class="text-center"><b>Proyecto de Investigacion</b></h1>
+<div class="header text-right">
+                 <a href="{% url 'proyecto-crear' %}"  class="waves-effect waves-light btn gradient-45deg-purple-deep-orange gradient-shadow"
+                 title="Crear">
+                     <i class="material-icons">add</i></a>
+</div>
+{% if object_list %}
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+            <div class="body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                        <thead>
+                        <tr>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">Nombre</th>
+                            <th class="text-center">Horas recomendadas</th>
+                            <th class="text-center">Tipo proyecto</th>
+                            <th class="text-center">Director</th>
+                            <th class="text-center">Opciones</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                           <th class="text-center">ID</th>
+                            <th class="text-center">Nombre</th>
+                            <th class="text-center">Horas recomendadas</th>
+                            <th class="text-center">Tipo proyecto</th>
+                            <th class="text-center">Director</th>
+                            <th class="text-center">Opciones</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        {% for proyect in object_list %}
+                        <tr>
+                            <td>{{ proyect.id }}</td>
+                            <td>{{ proyect.nombre }}</td>
+                            <td>{{ proyect.horas_recomendadas }}</td>
+                            <td>{{ proyect.tipo_proyecto }}</td>
+                            <td>{{ proyect.director.nombre }} {{proyect.director.apellidos}}</td>
+
+                            <td>
+                                <a class="waves-effect waves-light btn" title="Editar"
+                                   href="">
+                                    <i class="material-icons">edit</i>
+                                </a>
+                                <a class="waves-effect waves-light btn" title="Ver"
+                                   href="">
+                                    <i class="material-icons">add</i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+{% else %}
+<h3 class="text-info">No se han registrado.</h3>
+{% endif %}
+{% endblock %}

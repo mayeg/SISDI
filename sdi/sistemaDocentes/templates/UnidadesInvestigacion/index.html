@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %} Docentes Investigadores {% endblock %}
+{% block title %} Unidades de Investigacion {% endblock %}
 
 {% block content %}
 <h1 class="text-center">Unidades de investigacion</h1>
@@ -21,25 +21,21 @@
         </a>
         </div>
         <div class="col-md-4">
-             <a href="{% url 'facultad'%}">
-            <h5>Centros</h5>
+             <a href="{% url 'proyecto'%}">
+            <h5>Proyectos de Investigacion</h5>
         </a>
         </div>
         <div class="col-md-4">
-             <a href="{% url 'facultad'%}">
-            <h5>Semilleros</h5>
+             <a href="{% url 'semilleros'%}">
+            <h5>Semilleros de Investigacion</h5>
         </a>
         </div>
         <div class="col-md-4">
-             <a href="{% url 'facultad'%}">
-            <h5>Grupos</h5>
+             <a href="{% url 'grupos'%}">
+            <h5>Grupos de Investigacion</h5>
         </a>
         </div>
 
     </div>
 </div>
-{% endblock %}
-{% block javascript %}
-<!-- Jquery DataTable Plugin Js -->
-
 {% endblock %}
