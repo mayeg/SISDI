@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="336aea9d-842e-450f-aa4e-33803042cb6a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/departamento/crear.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/grupo/crear.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/grupo/grupo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/proyecto/crear.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/proyecto/proyecto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/semillero/crear.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/semillero/semillero.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/Docentes/docente-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/Docentes/docente-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/departamento.html" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/departamento/departamento.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/facultad.html" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/facultad/facultad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/plantilla/pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/templates/plantilla/pagination.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdi/sistemaDocentes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sdi/sistemaDocentes/views.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,7 +19,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3855">
+            <state relative-caret-position="3615">
               <caret line="257" column="75" selection-start-line="257" selection-start-column="75" selection-end-line="257" selection-end-column="75" />
             </state>
           </provider>
@@ -54,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crear.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="crear.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/proyecto/crear.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="362">
@@ -63,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2505">
-              <caret line="169" column="41" selection-start-line="169" selection-start-column="41" selection-end-line="169" selection-end-column="41" />
+            <state relative-caret-position="156">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
             </state>
           </provider>
         </entry>
@@ -123,7 +103,7 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
+            <state relative-caret-position="195">
               <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -204,7 +184,6 @@
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/templates/index.html" />
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/templates/base.html" />
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/semillero/crear.html" />
-        <option value="$PROJECT_DIR$/sdi/sistemaDocentes/models.py" />
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/forms.py" />
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/grupo/crear.html" />
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/urls.py" />
@@ -213,6 +192,7 @@
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/proyecto/proyecto.html" />
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/views.py" />
         <option value="$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/proyecto/crear.html" />
+        <option value="$PROJECT_DIR$/sdi/sistemaDocentes/models.py" />
       </list>
     </option>
   </component>
@@ -258,23 +238,6 @@
               <item name="sdi" type="462c0819:PsiDirectoryNode" />
               <item name="sistemaDocentes" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi" type="462c0819:PsiDirectoryNode" />
-              <item name="sdi" type="462c0819:PsiDirectoryNode" />
-              <item name="sistemaDocentes" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="UnidadesInvestigacion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi" type="462c0819:PsiDirectoryNode" />
-              <item name="sdi" type="462c0819:PsiDirectoryNode" />
-              <item name="sistemaDocentes" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="UnidadesInvestigacion" type="462c0819:PsiDirectoryNode" />
-              <item name="semillero" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -709,14 +672,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3855">
+        <state relative-caret-position="3615">
           <caret line="257" column="75" selection-start-line="257" selection-start-column="75" selection-end-line="257" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/proyecto/crear.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
+        <state relative-caret-position="195">
           <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -726,15 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2505">
-          <caret line="169" column="41" selection-start-line="169" selection-start-column="41" selection-end-line="169" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdi/sistemaDocentes/templates/UnidadesInvestigacion/proyecto/crear.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        <state relative-caret-position="156">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
         </state>
       </provider>
     </entry>
