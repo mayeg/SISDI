@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sdiufps',
         'USER': 'root',
-        'PASSWORD': 'admin123',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
     }
 }
